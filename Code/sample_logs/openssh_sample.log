@@ -1,0 +1,24 @@
+Jun 14 15:16:01 server1 sshd[19939]: Failed password for invalid user guest from 218.188.2.4 port 62894 ssh2
+Jun 14 15:16:02 server1 sshd[19937]: Failed password for invalid user test from 218.188.2.4 port 62635 ssh2
+Jun 14 15:16:03 server1 sshd[19934]: Accepted password for root from 10.0.0.1 port 52462 ssh2
+Jun 14 15:16:04 server1 sshd[19935]: Accepted publickey for admin from 10.0.0.5 port 42390 ssh2
+Jun 14 15:16:05 server1 sshd[19940]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Jun 14 15:16:06 server1 sshd[19940]: pam_unix(sshd:session): session closed for user root
+Jun 14 15:21:01 server1 sshd[19944]: Failed password for invalid user admin from 194.8.74.152 port 39846 ssh2
+Jun 14 15:21:02 server1 sshd[19944]: Failed password for invalid user admin from 194.8.74.152 port 39846 ssh2
+Jun 14 15:21:03 server1 sshd[19944]: Failed password for invalid user admin from 194.8.74.152 port 39846 ssh2
+Jun 14 15:21:04 server1 sshd[19944]: Disconnecting: Too many authentication failures for admin
+Jun 14 15:26:01 server1 sshd[19948]: Failed password for root from 61.174.51.216 port 38390 ssh2
+Jun 14 15:26:02 server1 sshd[19948]: Failed password for root from 61.174.51.216 port 38390 ssh2
+Jun 14 15:27:01 server1 sshd[19949]: Accepted password for deploy from 10.0.0.10 port 51234 ssh2
+Jun 14 15:28:01 server1 sshd[19949]: pam_unix(sshd:session): session opened for user deploy by (uid=0)
+Jun 14 15:31:01 server1 sshd[19952]: Received disconnect from 10.0.0.5 port 42390:11: disconnected by user
+Jun 14 15:33:01 server1 sshd[19953]: error: connect_to 10.0.0.100 port 22: Connection refused
+Jun 14 15:36:01 server1 sshd[19954]: Failed password for root from 222.33.90.199 port 4750 ssh2
+Jun 14 15:36:02 server1 sshd[19954]: Failed password for root from 222.33.90.199 port 4750 ssh2
+Jun 14 15:36:03 server1 sshd[19954]: Failed password for root from 222.33.90.199 port 4750 ssh2
+Jun 14 15:36:04 server1 sshd[19954]: Disconnecting: Too many authentication failures for root
+Jun 14 15:40:01 server1 sshd[19956]: Accepted publickey for deploy from 10.0.0.10 port 51290 ssh2
+Jun 14 15:40:02 server1 sshd[19956]: pam_unix(sshd:session): session opened for user deploy by (uid=0)
+Jun 14 15:45:01 server1 sshd[19957]: reverse mapping checking getaddrinfo for 218-188-2-4.example.com failed - POSSIBLE BREAK-IN ATTEMPT!
+Jun 14 15:45:02 server1 sshd[19957]: Failed password for root from 218.188.2.4 port 63001 ssh2

@@ -1,0 +1,1 @@
+# LogInsight AI — Data Models

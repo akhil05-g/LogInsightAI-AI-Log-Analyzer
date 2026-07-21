@@ -1,0 +1,16 @@
+Information 6/14/2024 3:16:01 PM Service Control Manager 7036 The Application Experience service entered the running state.
+Information 6/14/2024 3:16:02 PM Service Control Manager 7036 The Windows Update service entered the running state.
+Warning 6/14/2024 3:17:01 PM Microsoft-Windows-Security-Auditing 4625 An account failed to log on. Account: Administrator Source: 192.168.1.50
+Warning 6/14/2024 3:17:02 PM Microsoft-Windows-Security-Auditing 4625 An account failed to log on. Account: admin Source: 192.168.1.50
+Information 6/14/2024 3:18:01 PM Microsoft-Windows-Security-Auditing 4624 An account was successfully logged on. Account: SYSTEM Logon Type: 5
+Error 6/14/2024 3:19:01 PM Application Error 1000 Faulting application name: svchost.exe, version: 10.0.19041.1, faulting module: ntdll.dll
+Error 6/14/2024 3:19:02 PM Application Error 1000 Faulting application name: explorer.exe, version: 10.0.19041.3636
+Information 6/14/2024 3:20:01 PM Microsoft-Windows-WindowsUpdateClient 19 Installation Successful: Windows successfully installed update KB5034441
+Warning 6/14/2024 3:21:01 PM disk 51 An error was detected on device \Device\Harddisk0\DR0 during a paging operation.
+Error 6/14/2024 3:22:01 PM Service Control Manager 7031 The Print Spooler service terminated unexpectedly. It has done this 3 time(s).
+Information 6/14/2024 3:23:01 PM Service Control Manager 7036 The Print Spooler service entered the running state.
+Error 6/14/2024 3:24:01 PM Microsoft-Windows-DistributedCOM 10016 The machine-default permission settings do not grant Local Activation permission
+Warning 6/14/2024 3:25:01 PM Microsoft-Windows-Kernel-Power 137 The system firmware has changed the processor's memory type range registers (MTRRs)
+Information 6/14/2024 3:26:01 PM Microsoft-Windows-Security-Auditing 4634 An account was logged off. Account: SYSTEM
+Error 6/14/2024 3:27:01 PM EventLog 6008 The previous system shutdown at 2:45:00 PM on 6/13/2024 was unexpected.
+Information 6/14/2024 3:28:01 PM Microsoft-Windows-Winlogon 7001 User Logon Notification for Customer Experience Improvement Program

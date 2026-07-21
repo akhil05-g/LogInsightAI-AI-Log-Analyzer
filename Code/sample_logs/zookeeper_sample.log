@@ -1,0 +1,20 @@
+2024-06-14 15:16:01,234 [myid:1] - INFO  [main:QuorumPeer@570] - Starting quorum peer
+2024-06-14 15:16:02,456 [myid:1] - INFO  [main:QuorumPeer@574] - My election bind port: /0.0.0.0:3888
+2024-06-14 15:16:03,789 [myid:1] - INFO  [QuorumPeer[myid=1]:FastLeaderElection@818] - New election. My id = 1, proposed zxid=0x200000042
+2024-06-14 15:16:04,012 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@600] - Notification: 1 (n.leader), 0x200000042 (n.zxid), 0x1 (n.round)
+2024-06-14 15:16:05,234 [myid:1] - INFO  [QuorumPeer[myid=1]:QuorumPeer@844] - LEADING
+2024-06-14 15:16:06,456 [myid:1] - INFO  [LearnerHandler-/10.0.0.2:52340:LearnerHandler@330] - Follower sid: 2 : info : /10.0.0.2:2888
+2024-06-14 15:16:07,789 [myid:1] - INFO  [LearnerHandler-/10.0.0.3:52341:LearnerHandler@330] - Follower sid: 3 : info : /10.0.0.3:2888
+2024-06-14 15:17:01,012 [myid:1] - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Too many connections from /10.0.0.100 - max is 60
+2024-06-14 15:18:01,234 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@649] - Got user-level KeeperException when processing sessionid:0x18f7e4c79a80001 type:create cxid:0x5 zxid:0x200000043 txntype:-1
+2024-06-14 15:19:01,456 [myid:1] - ERROR [CommitProcessor:1:NIOServerCnxn@178] - Session 0x18f7e4c79a80002 has expired
+2024-06-14 15:20:01,789 [myid:1] - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Connection request from old client /10.0.0.50:41234; will be dropped if server is in r-o mode
+2024-06-14 15:21:01,012 [myid:1] - ERROR [SyncThread:1:FileTxnLog@272] - Unable to write to log: java.io.IOException: No space left on device
+2024-06-14 15:21:02,234 [myid:1] - FATAL [SyncThread:1:ZooKeeperServer@825] - Severe unrecoverable error, exiting - no space on device for transaction log
+2024-06-14 15:22:01,456 [myid:1] - INFO  [main:QuorumPeer@570] - Starting quorum peer
+2024-06-14 15:22:02,789 [myid:1] - INFO  [QuorumPeer[myid=1]:FastLeaderElection@818] - New election. My id = 1, proposed zxid=0x200000043
+2024-06-14 15:22:03,012 [myid:1] - INFO  [QuorumPeer[myid=1]:QuorumPeer@844] - FOLLOWING
+2024-06-14 15:22:04,234 [myid:1] - INFO  [QuorumPeer[myid=1]:Learner@332] - Getting a diff from the leader 0x200000043
+2024-06-14 15:23:01,456 [myid:1] - WARN  [RecvWorker:2:QuorumCnxManager$RecvWorker@680] - Connection broken for id 2, my id = 1, error: java.net.SocketTimeoutException: Read timed out
+2024-06-14 15:24:01,789 [myid:1] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@215] - Accepted socket connection from /10.0.0.100:52345
+2024-06-14 15:25:01,012 [myid:1] - INFO  [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@649] - Processed session termination for sessionid: 0x18f7e4c79a80003

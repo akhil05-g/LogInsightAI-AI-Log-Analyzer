@@ -1,0 +1,51 @@
+081109 203615 148 INFO dfs.DataNode$PacketResponder: PacketResponder 1 for block blk_38865049064139660 terminating
+081109 203615 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.jar. blk_-1608999687919862906
+081109 203807 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.73.220:50010 is added to blk_7128370237687728475 size 67108864
+081109 204005 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.delete: blk_8229193803249955061 is added to invalidSet of 10.251.42.84:50010
+081109 204015 35 INFO dfs.FSNamesystem: BLOCK* ask 10.251.31.85:50010 to replicate blk_-7606652666380688054 to datanode(s) 10.251.203.80:50010
+081109 204106 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.203.80:50010 is added to blk_-7606652666380688054 size 67108864
+081109 204107 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.43.21:50010 is added to blk_-7606652666380688054 size 67108864
+081109 204416 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.split. blk_-5765073684631955531
+081109 204�617 35 WARN dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: Redundant addStoredBlock request received for blk_5765073684631955531 on 10.251.73.220:50010 size 18 However, this block does not belong to any file.
+081109 204830 35 ERROR dfs.DataNode$PacketResponder: Received block blk_-7060162995656506570 of size 67108864 from /10.251.42.84
+081109 205005 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.31.85:50010 is added to blk_-4649635618530678930 size 67108864
+081109 205219 35 INFO dfs.DataNode$DataXceiver: Receiving block blk_-1608999687919862906 src: /10.251.43.21:45933 dest: /10.251.43.21:50010
+081109 205414 35 INFO dfs.FSNamesystem: BLOCK* ask 10.251.203.80:50010 to replicate blk_-2218775051482970612 to datanode(s) 10.251.43.21:50010
+081109 205617 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.delete: blk_2522564519296415656 is added to invalidSet of 10.251.42.84:50010
+081109 210012 35 ERROR dfs.DataNode$PacketResponder: Exception in receiveBlock for block blk_8229193803249955061: java.io.IOException: Could not read from stream
+081109 210015 35 WARN dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: Redundant addStoredBlock request received for blk_4254284386498498272 on 10.251.73.220:50010 size 18
+081109 210225 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.allocateBlock: /mnt/hadoop/mapred/system/job_200811092030_0001/job.xml. blk_7240432903498807677
+081109 210427 35 INFO dfs.DataNode$DataXceiver: Receiving block blk_7240432903498807677 src: /10.251.31.85:58265 dest: /10.251.31.85:50010
+081109 210632 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.31.85:50010 is added to blk_7240432903498807677 size 41 
+081109 210837 35 INFO dfs.FSNamesystem: BLOCK* ask 10.251.73.220:50010 to replicate blk_7128370237687728475 to datanode(s) 10.251.42.84:50010 10.251.31.85:50010
+081109 211049 35 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-5765073684631955531 terminating
+081109 211250 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.42.84:50010 is added to blk_7128370237687728475 size 67108864
+081109 211455 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.delete: blk_-4649635618530678930 is added to invalidSet of 10.251.203.80:50010
+081109 211658 35 ERROR dfs.DataNode$DataXceiver: DataXceiver: java.io.IOException: Connection reset by peer
+081109 211700 35 ERROR dfs.DataNode$DataXceiver: DatanodeRegistration(10.251.43.21:50010, storageID=DS-1165689064-10.251.43.21-50010-1224118750700, infoPort=50075, ipcPort=50020):DataXceiver: java.io.IOException: Could not write to stream
+081109 211912 35 WARN dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: Redundant addStoredBlock request received for blk_-2218775051482970612 on 10.251.203.80:50010 size 67108864
+081109 212118 35 INFO dfs.FSNamesystem: BLOCK* ask 10.251.42.84:50010 to replicate blk_-1608999687919862906 to datanode(s) 10.251.73.220:50010
+081109 212334 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.allocateBlock: /user/root/rand/_temporary/_task_200811092030_0001_m_000590_0/part-00590. blk_4648400706498498272
+081109 212537 35 INFO dfs.DataNode$DataXceiver: Receiving block blk_4648400706498498272 src: /10.251.203.80:34059 dest: /10.251.203.80:50010
+081109 212748 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.203.80:50010 is added to blk_4648400706498498272 size 67108864
+081109 212952 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.delete: blk_-7060162995656506570 is added to invalidSet of 10.251.42.84:50010
+081109 213201 35 INFO dfs.FSNamesystem: BLOCK* ask 10.251.31.85:50010 to replicate blk_-5765073684631955531 to datanode(s) 10.251.42.84:50010
+081109 213415 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.42.84:50010 is added to blk_-5765073684631955531 size 18
+081109 213618 35 INFO dfs.DataNode$PacketResponder: PacketResponder 2 for block blk_4648400706498498272 terminating
+081109 213821 35 ERROR dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: Cannot add block blk_-9072862682551629060 to any file: block does not exist in blocksMap
+081109 214030 35 WARN dfs.DataNode$PacketResponder: Slow PacketResponder for block blk_38865049064139660: 7623ms
+081109 214245 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.allocateBlock: /user/root/rand/_temporary/_task_200811092030_0001_m_000765_0/part-00765. blk_-3242592806558315952
+081109 214450 35 INFO dfs.DataNode$DataXceiver: Receiving block blk_-3242592806558315952 src: /10.251.73.220:45738 dest: /10.251.73.220:50010
+081109 214705 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.73.220:50010 is added to blk_-3242592806558315952 size 67108864
+081109 214912 35 INFO dfs.FSNamesystem: BLOCK* ask 10.251.203.80:50010 to replicate blk_4648400706498498272 to datanode(s) 10.251.31.85:50010 10.251.73.220:50010
+081109 215127 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.delete: blk_7240432903498807677 is added to invalidSet of 10.251.31.85:50010
+081109 215338 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.31.85:50010 is added to blk_4648400706498498272 size 67108864
+081109 215540 35 ERROR dfs.DataNode$PacketResponder: Exception in receiveBlock for block blk_-3242592806558315952: java.io.EOFException
+081109 215543 35 ERROR dfs.DataNode$PacketResponder: PacketResponder blk_-3242592806558315952 Exception java.io.IOException: Broken pipe
+081109 215750 35 WARN dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: Redundant addStoredBlock request received for blk_38865049064139660 on 10.251.42.84:50010 size 67108864
+081109 220005 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.allocateBlock: /user/root/rand/_temporary/_task_200811092030_0001_m_001000_0/part-01000. blk_-8862627680246690264
+081109 220210 35 INFO dfs.DataNode$DataXceiver: Receiving block blk_-8862627680246690264 src: /10.251.42.84:39267 dest: /10.251.42.84:50010
+081109 220415 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.addStoredBlock: blockMap updated: 10.251.42.84:50010 is added to blk_-8862627680246690264 size 67108864
+081109 220620 35 INFO dfs.FSNamesystem: BLOCK* ask 10.251.73.220:50010 to replicate blk_-3242592806558315952 to datanode(s) 10.251.42.84:50010
+081109 220828 35 INFO dfs.DataNode$PacketResponder: PacketResponder 0 for block blk_-8862627680246690264 terminating
+081109 221035 35 INFO dfs.FSNamesystem: BLOCK* NameSystem.delete: blk_-2218775051482970612 is added to invalidSet of 10.251.203.80:50010

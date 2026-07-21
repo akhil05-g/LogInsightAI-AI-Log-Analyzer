@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LogInsight AI-" Enterprise intelligent log analysis powered by Gemini AI and MCP">
+  <title>LogInsight AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=32">
+  <link rel="stylesheet" href="css/dashboard.css?v=33">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/quantum.js"></script>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234F46E5'/><path d='M8 22V10l4 4 4-6 4 6 4-4v12z' fill='%23fff' opacity='.9'/></svg>">
+</head>
+
+<body>
+
+  <!-- Animated Background -->
+  <div class="vanta-bg" id="vanta-bg"></div>
+
+  <!-- Glass Navigation -->
+  <nav class="glass-nav" id="main-nav">
+    <a class="nav-brand" href="#" onclick="app.ui.showPage('landing'); return false;" style="text-decoration:none;cursor:pointer">
+      <div class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+        </svg>
+      </div>
+      <span class="nav-title">Log<span>Insight</span> AI</span>
+    </a>
+    <div class="nav-links">
+      <button class="nav-link active" data-page="landing" id="nav-home">Home</button>
+      <button class="nav-link" data-page="dashboard" id="nav-dashboard">Dashboard</button>
+    </div>
+  </nav>
+
+  <!-- Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢? LANDING PAGE Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢?Ã¢? -->
+  <div class="page active" id="page-landing">
+    <section class="hero">
+      <div class="hero-badge" data-aos="fade-down" data-aos-duration="600"><span class="pulse"></span> AI-Powered Log Intelligence</div>
+      <h1 data-aos="fade-up" data-aos-duration="800">Intelligent Log Analysis,<br><span class="gradient-text">Powered by AI</span></h1>
+      <p class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"><span id="typed-target"></span></p>
+      <div class="hero-actions">
+        <button class="btn-glow primary" id="hero-cta">
+          Get Started
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+      <div class="stats-row" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        <div class="stat-pill">
+          <div class="val">99.9%</div>
+          <div class="label">Detection Accuracy</div>
+        </div>
+        <div class="stat-pill">
+          <div class="val">10x</div>
+          <div class="label">Faster Analysis</div>
+        </div>
+        <div class="stat-pill">
+          <div class="val">4</div>
+          <div class="label">Detection Engines</div>
+        </div>
+        <div class="stat-pill">
+          <div class="val">6+</div>
+          <div class="label">Log Formats</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="0">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M12 2a4 4 0 0 1 4 4c0 1.5-.8 2.8-2 3.4V11h2a6 6 0 0 1 6 6v1H2v-1a6 6 0 0 1 6-6h2V9.4A4 4 0 0 1 12 2z" />
+            <circle cx="12" cy="6" r="2" />
+          </svg>
+        </div>
+        <h3>AI-Powered Analysis</h3>
+        <p>Gemini AI generates structured reports with root cause analysis and actionable fixes.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="7" height="7" rx="1" />
+          </svg>
+        </div>
+        <h3>Template Mining</h3>
+        <p>Drain3 algorithm clusters log messages into structural templates automatically.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+          </svg>
+        </div>
+        <h3>Anomaly Detection</h3>
+        <p>Salesforce LogAI + PyOD Isolation Forest identify statistical outliers in real-time.</p>
+      </div>
+      <div class="feature-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            <circle cx="12" cy="16" r="1" />
+          </svg>
+        </div>
+        <h3>Security Scanning</h3>
+        <p>Detect brute force attacks, unauthorized access, and potential breaches instantly.</p>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <h2 class="section-heading" data-aos="fade-up">How It Works</h2>
+      <div class="steps-grid">
+        <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="step-number">1</div>
+          <h4>Upload Logs</h4>
+          <p>Drag and drop any log file Ã¢?" syslog, Apache, HDFS, JSON, or plain text format.</p>
+        </div>
+        <div class="step-connector" data-aos="fade-up" data-aos-delay="100">
+          <svg width="40" height="2"><line x1="0" y1="1" x2="40" y2="1" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/></svg>
+        </div>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">2</div>
+          <h4>AI Analyzes</h4>
+          <p>Gemini AI orchestrates parsing, template mining, and anomaly detection via MCP.</p>
+        </div>
+        <div class="step-connector" data-aos="fade-up" data-aos-delay="300">
+          <svg width="40" height="2"><line x1="0" y1="1" x2="40" y2="1" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/></svg>
+        </div>
+        <div class="step-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="step-number">3</div>
+          <h4>Get Insights</h4>
+          <p>Receive structured reports with root cause analysis, severity ratings, and fix recommendations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="architecture">
+      <h2 class="section-heading" data-aos="fade-up">System Architecture</h2>
+      <div class="arch-grid" data-aos="fade-up" data-aos-delay="200">
+        <div class="arch-card">
+          <div class="arch-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+          </div>
+          <h4>Log Ingestion</h4>
+          <p>Multi-format parser supporting syslog, Apache, HDFS, JSON, and more</p>
+        </div>
+        <div class="arch-connector">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
+        <div class="arch-card">
+          <div class="arch-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h4>MCP Server</h4>
+          <p>Model Context Protocol exposing parse_logs and detect_errors tools</p>
+        </div>
+        <div class="arch-connector">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </div>
+        <div class="arch-card">
+          <div class="arch-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+          </div>
+          <h4>Gemini AI</h4>
+          <p>Agentic tool-calling loop with Vertex AI for intelligent analysis</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          LogInsight AI
+        </div>
+        <div class="footer-links">
+          <span>Powered by Gemini AI & MCP</span>
+          <span class="footer-dot">&middot;</span>
+          <span>Built for Enterprise</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" title="Back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    </button>
+  </div>
+
+
+  <!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â DASHBOARD PAGE Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+  <div class="page" id="page-dashboard">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="sidebar-logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <span class="sidebar-title">LogInsight <span>AI</span></span>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">NAVIGATION</div>
+        <button class="sidebar-item active" data-tab="analysis" id="side-analysis"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span>Analysis</span></button>
+        <button class="sidebar-item" data-tab="summary" id="side-summary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>AI Summary</span></button>
+        <button class="sidebar-item" data-tab="logs" id="side-logs"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span>Raw Logs</span></button>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">ACTIONS</div>
+        <button class="sidebar-action-btn primary-action" id="btn-full" disabled title="Full Analysis (Ctrl+Enter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span>Full Analysis</span></button>
+        <div class="sidebar-action-row">
+          <button class="sidebar-mini-btn" id="btn-parse" disabled title="Parse"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Parse</span></button>
+          <button class="sidebar-mini-btn" id="btn-detect" disabled title="Detect"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Detect</span></button>
+          <button class="sidebar-mini-btn" id="btn-export" disabled title="Export"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>Export</span></button>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-label">SENSITIVITY</div>
+        <div class="sidebar-select-wrap">
+          <select class="sidebar-select" id="sens"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option></select>
+          <svg class="sidebar-select-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+    </aside>
+    <main class="dash-main" id="dash-main">
+      <div class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button class="sidebar-toggle" id="sidebar-toggle" title="Toggle sidebar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="18" y2="18"/></svg></button>
+          <h2 class="dash-page-title">Log Analysis Dashboard</h2>
+        </div>
+        <span class="dash-subtitle" id="loaded-file">Upload a log file to begin AI-powered analysis</span>
+      </div>
+
+      <!-- Compact Upload Zone -->
+      <div class="upload-card" id="upload-zone">
+        <div class="upload-card-left">
+          <div class="upload-icon-circle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+          <div class="upload-card-text">
+            <div class="upload-title">Upload Log File</div>
+            <div class="upload-hint">Drop file here or <span class="upload-link">browse</span> &middot; .log, .txt up to 10 MB</div>
+          </div>
+        </div>
+        <div class="upload-card-right">
+          <button class="upload-browse-btn" onclick="document.getElementById('upload-input').click()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>Choose File</button>
+        </div>
+        <input type="file" id="upload-input" class="upload-input" accept=".log,.txt">
+      </div>
+
+      <!-- File Loaded Bar + Run Analysis (shown after upload) -->
+      <div class="file-loaded-bar hidden" id="file-preview">
+        <div class="file-loaded-info">
+          <div class="file-loaded-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div class="file-loaded-details">
+            <span class="file-loaded-name" id="preview-filename">&mdash;</span>
+            <span class="file-loaded-meta" id="preview-meta">&mdash;</span>
+          </div>
+        </div>
+        <div class="file-loaded-actions">
+          <button class="run-analysis-btn" id="btn-run-analysis" title="Run Full Analysis (Ctrl+Enter)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Run Analysis</button>
+          <button class="file-action-btn" id="btn-new-upload" title="Upload different file"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>New File</button>
+        </div>
+      </div>
+
+      <!-- Tab Panes -->
+      <div class="dash-content">
+        <div class="tab-pane active" id="pane-analysis">
+          <div class="empty-state" id="analysis-empty">
+            <div class="empty-state-graphic">
+              <div class="empty-pulse-ring"></div>
+              <div class="empty-pulse-ring delay-1"></div>
+              <div class="empty-pulse-ring delay-2"></div>
+              <div class="empty-icon-wrap">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+            </div>
+            <h3>No Analysis Yet</h3>
+            <p>Upload a log file and run analysis to see real-time insights, anomaly detection, and pattern discovery.</p>
+            <div class="empty-features">
+              <span class="empty-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Anomaly Detection</span>
+              <span class="empty-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> Template Mining</span>
+              <span class="empty-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> AI Insights</span>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="pane-summary">
+          <div class="empty-state" id="summary-empty">
+            <div class="empty-state-graphic">
+              <div class="empty-pulse-ring"></div>
+              <div class="empty-pulse-ring delay-1"></div>
+              <div class="empty-icon-wrap">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+            </div>
+            <h3>AI Summary</h3>
+            <p>Run <strong>Full Analysis</strong> to generate an AI-powered summary with Gemini.</p>
+          </div>
+        </div>
+        <div class="tab-pane" id="pane-logs">
+          <div class="log-viewer">
+            <div class="log-header"><span class="log-header-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>Log Content</span><span id="log-count">0 lines</span></div>
+            <div class="log-filter-bar" id="log-filter-bar"><div class="log-filter-group"><button class="log-filter-btn active" data-level="all">All</button><button class="log-filter-btn" data-level="error">Errors</button><button class="log-filter-btn" data-level="warn">Warnings</button><button class="log-filter-btn" data-level="info">Info</button></div><input type="text" class="log-search" id="log-search" placeholder="Search logs..."></div>
+            <div class="log-body" id="log-body"><div class="log-empty">Upload a log file to view contents</div></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="loading-content">
+      <l-quantum size="65" speed="1.5" color="#4F46E5"></l-quantum>
+      <div class="loading-text" id="loading-text">Analyzing...</div>
+      <div class="loading-sub">This may take a moment</div>
+    </div>
+  </div>
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/app.js?v=32"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      if (window.VANTA) {
+        VANTA.WAVES({ el: "#vanta-bg", mouseControls: true, touchControls: true, gyroControls: false, minHeight: 200, minWidth: 200, scale: 1, scaleMobile: 1, color: 0xd4d0ff, shininess: 35, waveHeight: 15, waveSpeed: 0.7, zoom: 0.85 });
+      }
+      if (window.AOS) { AOS.init({ once: true, offset: 60 }); }
+      if (window.Typed) {
+        new Typed('#typed-target', { strings: ['Uncover hidden patterns in your log data.','Detect anomalies before they impact users.','ML-based detection across millions of lines.','AI-powered root cause analysis in seconds.'], typeSpeed: 35, backSpeed: 20, backDelay: 2000, loop: true, showCursor: true, cursorChar: '|' });
+      }
+      var scrollBtn = document.getElementById('scroll-top');
+      window.addEventListener('scroll', function() { scrollBtn.classList.toggle('visible', window.scrollY > 400); });
+      scrollBtn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && e.key === 'Enter') { e.preventDefault(); document.getElementById('btn-full').click(); }
+        if (e.ctrlKey && e.key === 'u') { e.preventDefault(); document.getElementById('upload-zone').click(); }
+      });
+      function animateCounter(el, target, suffix) { var c=0, s=target/40, t=setInterval(function(){c+=s;if(c>=target){c=target;clearInterval(t);}el.textContent=(Number.isInteger(target)?Math.round(c):c.toFixed(1))+(suffix||'');},30); }
+      var counted=false, obs=new IntersectionObserver(function(e){if(e[0].isIntersecting&&!counted){counted=true;var p=document.querySelectorAll('.stat-pill .val');if(p[0])animateCounter(p[0],99.9,'%');if(p[1])animateCounter(p[1],10,'x');if(p[2])animateCounter(p[2],4,'');if(p[3])animateCounter(p[3],6,'+');}});
+      var sr=document.querySelector('.stats-row'); if(sr)obs.observe(sr);
+      /* Run Analysis button in main content */
+      var runBtn = document.getElementById('btn-run-analysis');
+      if (runBtn) { runBtn.addEventListener('click', function() { document.getElementById('btn-full').click(); }); }
+    });
+  </script>
+</body>
+</html>

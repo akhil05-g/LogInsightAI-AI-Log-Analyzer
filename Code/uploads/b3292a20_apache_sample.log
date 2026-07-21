@@ -1,0 +1,20 @@
+192.168.1.100 - - [14/Jun/2024:15:16:01 +0000] "GET /index.html HTTP/1.1" 200 2048
+192.168.1.101 - admin [14/Jun/2024:15:16:02 +0000] "POST /api/login HTTP/1.1" 200 512
+192.168.1.103 - - [14/Jun/2024:15:16:04 +0000] "GET /api/users HTTP/1.1" 401 256
+192.168.1.201 - - [14/Jun/2024:15:17:02 +0000] "POST /api/data HTTP/1.1" 500 512
+192.168.1.201 - - [14/Jun/2024:15:17:03 +0000] "POST /api/data HTTP/1.1" 500 512
+192.168.1.105 - - [14/Jun/2024:15:18:02 +0000] "DELETE /api/users/42 HTTP/1.1" 403 128
+192.168.1.105 - - [14/Jun/2024:15:18:03 +0000] "DELETE /api/users/42 HTTP/1.1" 403 128
+192.168.1.108 - - [14/Jun/2024:15:20:01 +0000] "POST /api/upload HTTP/1.1" 413 64
+192.168.1.109 - - [14/Jun/2024:15:20:02 +0000] "GET /../../../etc/passwd HTTP/1.1" 400 0
+192.168.1.110 - - [14/Jun/2024:15:21:01 +0000] "GET /api/search?q=<script>alert(1)</script> HTTP/1.1" 400 128
+192.168.1.201 - - [14/Jun/2024:15:21:02 +0000] "POST /api/data HTTP/1.1" 502 256
+192.168.1.201 - - [14/Jun/2024:15:21:03 +0000] "POST /api/data HTTP/1.1" 503 128
+192.168.1.201 - - [14/Jun/2024:15:21:04 +0000] "POST /api/data HTTP/1.1" 504 0
+192.168.1.100 - - [14/Jun/2024:15:22:01 +0000] "GET /dashboard HTTP/1.1" 200 12288
+10.0.0.50 - - [14/Jun/2024:15:22:02 +0000] "GET /health HTTP/1.1" 200 64
+192.168.1.200 - - [14/Jun/2024:15:17:01 +0000] "GET /wp-admin HTTP/1.1" 404 1024
+[Fri Jun 14 15:17:02 2024] [error] [client 192.168.1.201] PHP Fatal error: Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/html/api/data.php:42
+[Fri Jun 14 15:21:02 2024] [error] [client 192.168.1.201] AH01114: HTTP: failed to make connection to backend: 10.0.0.200
+[Fri Jun 14 15:21:03 2024] [error] [client 192.168.1.201] AH00898: Error reading from remote server returned by /api/data
+[Fri Jun 14 15:20:01 2024] [warn] [client 192.168.1.108] ModSecurity: Request body too large
