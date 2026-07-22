@@ -1,6 +1,9 @@
 """
 LogInsight AI — FastAPI Application
-Main entry point for the backend server (port 8000).
+Main entry point for the backend server.
+
+On Render: MCP tools run in-process via mounted SSE app (single port).
+Locally:   Connects to separate MCP server on port 8001.
 """
 
 import logging
@@ -11,7 +14,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from backend.config import FRONTEND_DIR, UPLOAD_DIR
-from backend.routes import logs, analysis
 
 # Configure logging
 logging.basicConfig(
@@ -21,6 +23,19 @@ logging.basicConfig(
 logger = logging.getLogger("loginsight")
 
 
+def _mount_mcp(app: FastAPI):
+    """Mount MCP server SSE transport directly into FastAPI (single-process mode)."""
+    try:
+        from mcp_server.server import mcp as mcp_server
+        mcp_sse = mcp_server.sse_app()
+        app.mount("/mcp", mcp_sse)
+        logger.info("✅ MCP server mounted in-process at /mcp")
+        return True
+    except Exception as e:
+        logger.warning(f"⚠️ Could not mount MCP in-process: {e}")
+        return False
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifecycle events."""
@@ -28,7 +43,7 @@ async def lifespan(app: FastAPI):
     logger.info(f"📁 Upload directory: {UPLOAD_DIR}")
     logger.info(f"🌐 Frontend served from: {FRONTEND_DIR}")
 
-    # Check MCP server connectivity
+    # Check MCP server connectivity (external or in-process)
     from backend.routes.analysis import _mcp_client
     mcp_ok = await _mcp_client.health_check()
     if mcp_ok:
@@ -60,7 +75,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Mount MCP SSE app in-process (for Render single-port deployment)
+_mount_mcp(app)
+
 # Include API routers
+from backend.routes import logs, analysis
 app.include_router(logs.router)
 app.include_router(analysis.router)
 
@@ -73,3 +92,4 @@ if FRONTEND_DIR.exists():
 async def health():
     """Global health check."""
     return {"status": "healthy", "service": "LogInsight AI", "version": "1.0.0"}
+

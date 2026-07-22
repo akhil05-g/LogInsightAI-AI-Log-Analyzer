@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: loginsight-ai
+    runtime: python
+    plan: free
+    rootDir: Code
+    buildCommand: "chmod +x build.sh && ./build.sh"
+    startCommand: "uvicorn backend.main:app --host 0.0.0.0 --port $PORT --workers 1"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: RENDER
+        value: "true"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: MKL_NUM_THREADS
+        value: "1"
+      - key: OPENBLAS_NUM_THREADS
+        value: "1"
+      - key: DEEPLOG_ENABLED
+        value: "true"
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GOOGLE_CLOUD_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: "gemini-3.1-flash-lite-preview"
+      - key: GROQ_MODEL
+        value: "llama-3.3-70b-versatile"
+      - key: LLM_PROVIDER
+        value: "groq"
+      - key: MCP_SERVER_HOST
+        value: "127.0.0.1"
+      - key: MCP_SERVER_PORT
+        value: "8001"
+      - key: BACKEND_HOST
+        value: "0.0.0.0"
+      - key: UPLOAD_DIR
+        value: "uploads"
+      - key: MAX_LOG_LINES
+        value: "5000"
+

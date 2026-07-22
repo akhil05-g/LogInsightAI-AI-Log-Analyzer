@@ -25,8 +25,10 @@ flashtext>=2.7
 pyod>=2.0.0
 logai
 scikit-learn>=1.4.0
-torch>=2.0.0
+# NOTE: torch is installed separately via build.sh with CPU-only wheels
+# to keep the deployment image small. Do NOT add torch here.
 
 # ── Data / ML Core ──
 numpy>=1.26.0
 pandas>=2.2.0
+

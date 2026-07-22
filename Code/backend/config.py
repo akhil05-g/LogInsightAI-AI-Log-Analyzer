@@ -34,8 +34,12 @@ MCP_SERVER_PORT = int(os.getenv("MCP_SERVER_PORT", "8001"))
 MCP_SERVER_URL = f"http://{MCP_SERVER_HOST}:{MCP_SERVER_PORT}"
 
 # Backend Configuration
-BACKEND_HOST = os.getenv("BACKEND_HOST", "127.0.0.1")
-BACKEND_PORT = int(os.getenv("BACKEND_PORT", "8000"))
+# On Render, PORT is provided dynamically; bind to 0.0.0.0 for external access
+BACKEND_HOST = os.getenv("BACKEND_HOST", "0.0.0.0")
+BACKEND_PORT = int(os.getenv("PORT", os.getenv("BACKEND_PORT", "8000")))
+
+# Render detection
+IS_RENDER = os.getenv("RENDER", "").lower() in ("true", "1")
 
 # Application Settings
 MAX_LOG_LINES = int(os.getenv("MAX_LOG_LINES", "5000"))
